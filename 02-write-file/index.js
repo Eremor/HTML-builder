@@ -17,7 +17,7 @@ const exitConsole = () => {
 }
 
 rl.on('line', (line) => {
-  if(line === 'exit') {
+  if(line.trim() === 'exit') {
     exitConsole();
   } else {
     writeStream.write(`${line}\n`);
